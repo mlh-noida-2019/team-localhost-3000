@@ -14,6 +14,9 @@ const UserSchema = new Schema({
   },
   college:{
     type: String
+  },
+  interest: {
+    type: String
   }
 });
 

@@ -16,6 +16,11 @@ background-image: url("https://www.transparenttextures.com/patterns/billie-holid
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+a:hover{
+  text-decoration: none!important;
+  color: #fff!important;
+}
+
 .icon-block {
   padding: 0 15px;
 }

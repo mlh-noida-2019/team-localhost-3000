@@ -4,10 +4,11 @@
 
 <style media="screen">
   .profilecard {
-    max-height: 400px;
-    background: #667db6;
-    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
-    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+    max-height: 450px;
+    background: #2980b9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
 
   .profilecard p {
@@ -40,6 +41,9 @@
       <p>
         <%=user.college%>
       </p>
+      <p>
+        <%=user.interest%>
+      </p>
     </div>
     <!-- <div class="col-lg-1"></div> -->
     <div class="col-lg-9 card orgcard text-center">
@@ -47,7 +51,7 @@
         <% data.forEach((col) => { %>
         <div class="col-lg-3 card" style="height: 200px;">
           <img style="width: 100%; padding:4px; margin:0;" src="<%=col.avatar_url%>" alt="">
-          <a href="<%=col.html_url%>" target="_blank">
+          <a href="/mate/<%=col.login%>" class="btn btn-success" target="_blank">
             <%= col.login %></a>
         </div>
         <% }); %>
