@@ -1,5 +1,7 @@
 <% include partials/header %>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <style media="screen">
 .login-page {
   /* width: 360px; */
@@ -102,15 +104,16 @@ body {
 </style>
 
 <div class="login-page">
+
+  <% if(message) {%>
+    <div class="conatiner" style="margin: 0 64px;">
+      <div class="alert alert-danger">
+        <%=message%>
+      </div>
+    </div>
+  <% } %>
   <div class="form">
     <h5 style="  text-transform: uppercase;">Register here</h5>
-    <!-- <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form> -->
     <form class="login-form" action="/signup" method="POST">
       <input type="text" placeholder="username" name="username" required/>
       <input type="email" placeholder="email" name="email" required/>

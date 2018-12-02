@@ -10,6 +10,12 @@
   font-family: Montserrat;
 }
 
+body{
+  background-color: #ebe4d9;
+background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
 .icon-block {
   padding: 0 15px;
 }
